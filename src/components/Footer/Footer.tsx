@@ -35,14 +35,14 @@ const Footer: React.FC = () => {
           <h3
             className="text-lg font-bold cursor-pointer transition-colors hover:text-white"
             onClick={() => setShowImprint(!showImprint)}>
-            Imprint
+            Impressum
           </h3>
         </div>
         <div className="my-2.5">
           <h3
             className="text-lg font-bold cursor-pointer transition-colors hover:text-white"
             onClick={() => setShowContact(!showContact)}>
-            Contact
+            Kontakt
           </h3>
         </div>
       </div>
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
           <div
             className="bg-[var(--accent-color)] p-5 rounded-lg max-w-md text-center shadow-lg"
             ref={imprintRef}>
-            <h3 className="text-xl mb-3.75">Imprint</h3>
+            <h3 className="text-xl mb-3.75">Impressum</h3>
             <p className="text-base my-2.5">Sinan Demir</p>
             <p className="text-base my-2.5">Am Südhang 18</p>
             <p className="text-base my-2.5">53844 Troisdorf</p>
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
           <div
             className="bg-[var(--accent-color)] p-5 rounded-lg max-w-md text-center shadow-lg"
             ref={contactRef}>
-            <h3 className="text-xl mb-3.75">Contact</h3>
+            <h3 className="text-xl mb-3.75">Kontakt</h3>
             <p className="text-base my-2.5">
               E-Mail:{" "}
               <a
