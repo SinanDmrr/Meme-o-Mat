@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <footer className="bg-[var(--accent-color)] p-5 text-center text-[var(--font-color)] font-sans w-full">
+    <footer className="gradient-accent-combined p-5 text-center text-[var(--font-color)] font-sans w-full">
       <div className="flex justify-center gap-10">
         <div className="my-2.5">
           <h3
