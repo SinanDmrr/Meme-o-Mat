@@ -5,7 +5,7 @@ export default function Header() {
     <header className="py-4 gradient-accent-combined w-full flex gap-4 justify-center items-center">
       <img src={trollFace} className="size-10 xs:size-24" />
       <h1
-        className="font-bold text-2xl text-[var(--font-color)] 
+        className="font-bold text-2xl text-white text-shadow-lg-green
       xs:text-4xl">
         Meme-O-Mat
       </h1>
