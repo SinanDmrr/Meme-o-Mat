@@ -6,12 +6,28 @@ interface IMemeInformation {
   bottomText: string;
 }
 
-export default function Main() {
+interface MainProps {
+  memeUrlArray: string[];
+}
+
+export default function Main({memeUrlArray}: MainProps) {
   const [memeInformation, setMemeInformation] = useState<IMemeInformation>({
     imgUrl: "http://i.imgflip.com/1bij.jpg",
     topText: "Montagsmorgen:",
     bottomText: "Ich bin wach, aber mein Wille nicht...",
   });
+
+  function handleGenerateMeme() {
+    if (memeUrlArray.length === 0) return;
+
+    const randomIndex = Math.floor(Math.random() * memeUrlArray.length);
+    const randomUrl = memeUrlArray[randomIndex];
+
+    setMemeInformation((prev) => ({
+      ...prev,
+      imgUrl: randomUrl,
+    }));
+  }
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     const {name, value} = event.currentTarget;
@@ -66,7 +82,9 @@ export default function Main() {
           </label>
         </div>
 
-        <button className="gradient-accent-combined rounded-3xl p-2 flex justify-center gap-3">
+        <button
+          className="gradient-accent-combined rounded-3xl p-2 flex justify-center gap-3"
+          onClick={handleGenerateMeme}>
           <img src={trollFace} className="w-10 " />
           <p className="text-[var(--font-color)] font-bold text-2xl">
             Erstelle jetzt dein Meme
@@ -75,7 +93,7 @@ export default function Main() {
         </button>
       </div>
       <div className="meme w-full max-w-[570px] min-w-[300px] my-5">
-        <img src={memeInformation.imgUrl} className="w-full" />
+        <img src={memeInformation.imgUrl} className="w-full max-h-200" />
         <span className="top">{memeInformation.topText}</span>
         <span className="bottom">{memeInformation.bottomText}</span>
       </div>
