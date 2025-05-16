@@ -13,7 +13,7 @@ export default function App() {
         const urls = data.data.memes.map((meme: {url: string}) => meme.url);
         setmemeUrlArray(urls);
       });
-  });
+  }, []);
 
   return (
     <div className="flex flex-col items-center w-full h-screen bg-[#a3b18a]">
