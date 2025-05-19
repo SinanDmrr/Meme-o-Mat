@@ -117,7 +117,7 @@ export default function Main({memeUrlArray}: MainProps) {
               placeholder="Oberer Text"
               name="topText"
               className="bg-white rounded-lg p-1 outline-none"
-              maxLength={40}
+              maxLength={50}
               value={memeInformation.topText}
               onChange={handleChange}
             />
@@ -138,7 +138,7 @@ export default function Main({memeUrlArray}: MainProps) {
               placeholder="Unterer Text"
               name="bottomText"
               className="bg-white rounded-lg p-1 outline-none"
-              maxLength={40}
+              maxLength={50}
               value={memeInformation.bottomText}
               onChange={handleChange}
             />
@@ -183,13 +183,13 @@ export default function Main({memeUrlArray}: MainProps) {
         </button>
       </div>
       <div
-        className="meme w-full max-w-[570px] min-w-[300px] my-5 relative"
+        className="meme w-full max-w-[450px] min-w-[300px] my-5 relative"
         ref={memeRef}
         style={{height: imageHeight ? `${imageHeight}px` : "auto"}}>
         <img
           ref={imgRef}
           src={memeInformation.imgUrl}
-          className="w-full max-h-[500px] object-contain"
+          className="w-full max-h-[450px] object-contain"
           onLoad={handleImageLoad}
           crossOrigin="anonymous"
         />
@@ -203,7 +203,7 @@ export default function Main({memeUrlArray}: MainProps) {
                 ? "0 0 10px rgba(0, 0, 0, 0.8)"
                 : "0 0 10px rgba(255, 255, 255, 0.8)",
           }}
-          className="absolute top-0 left-1/2 transform -translate-x-1/2 meme-text font-bold text-4xl text-shadow-lg-green break-words inline-block text-center">
+          className="absolute top-0 left-1/2 transform -translate-x-1/2 meme-text font-bold text-3xl text-shadow-lg-green break-words inline-block text-center">
           {memeInformation.topText}
         </span>
 
@@ -216,7 +216,7 @@ export default function Main({memeUrlArray}: MainProps) {
                 ? "0 0 10px rgba(0, 0, 0, 0.8)"
                 : "0 0 10px rgba(255, 255, 255, 0.8)",
           }}
-          className="absolute bottom-6 left-1/2 transform -translate-x-1/2 meme-text font-bold text-4xl text-shadow-lg-green break-words inline-block text-center">
+          className="absolute bottom-6 left-1/2 transform -translate-x-1/2 meme-text font-bold text-3xl text-shadow-lg-green break-words inline-block text-center">
           {memeInformation.bottomText}
         </span>
       </div>
